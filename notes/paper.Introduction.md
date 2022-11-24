@@ -2,7 +2,7 @@
 id: cwlhau9r4wa0zaud9vj0ajh
 title: Introduction
 desc: ''
-updated: 1662441870337
+updated: 1669254520475
 created: 1661539410751
 output:
   pdf_document:
@@ -13,7 +13,7 @@ section-refs-bibliography: bib/bib.bib
 ---
 Here lies the introduction. We will discuss the PETtab software @schmiesterPEtabInteroperableSpecification2021.
 
-![](./assets/images/PETab-logo.png)
+- Giscus example
 
 <script src="https://giscus.app/client.js"
         data-repo="Mjvolk3/Parameter_Estimation"

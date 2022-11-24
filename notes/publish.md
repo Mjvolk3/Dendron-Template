@@ -2,7 +2,7 @@
 id: k0qo53e6jvew0mcyv49bu0e
 title: Publish
 desc: ''
-updated: 1661970817297
+updated: 1669254687493
 created: 1661540036400
 ---
 
@@ -19,7 +19,7 @@ created: 1661540036400
 From root directory run:
 
 ```{bash}
-pandoc -f gfm --toc -s pod_export/Parameter_Estimation/Paper.md -o paper.docx --reference-doc=reference.docx
+pandoc -f gfm --toc -s pod_export/Dendron-Template/Paper.md -o paper.docx --reference-doc=reference.docx
 ```
 - `-f` format GitHub ... something style
     - [ ] Look up later
