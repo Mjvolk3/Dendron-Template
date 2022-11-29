@@ -41,7 +41,7 @@ workspace:
         zoomSpeed: 1
         createStub: false
     enableAutoCreateOnDefinition: false
-    enableXVaultWikiLink: false
+    enableXVaultWikiLink: true
     enableRemoteVaultInit: true
     workspaceVaultSyncMode: noCommit
     enableAutoFoldFrontmatter: false
