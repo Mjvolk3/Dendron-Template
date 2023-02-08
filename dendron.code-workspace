@@ -16,7 +16,11 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggest.showSnippets": true,
         "editor.tabCompletion": "on",
-        "dendron.enableSelfContainedVaultWorkspace": true
+        "dendron.enableSelfContainedVaultWorkspace": true,
+        "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
+        "workbench.colorCustomizations": {
+            "titleBar.activeBackground": "#ff000095"
+        }
     },
     "extensions": {
         "recommendations": [
@@ -32,6 +36,40 @@
             "shd101wyy.markdown-preview-enhanced",
             "kortina.vscode-markdown-notes",
             "mushan.vscode-paste-image"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Workspace Folder",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": true,
+                "cwd": "${workspaceFolder}"
+            },
+            {
+                "name": "Python: Current File",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": true,
+                "cwd": "${fileDirname}"
+            },
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Pandoc: quick-pdf",
+                "type": "shell",
+                "command": "cd ./notes && pandoc -F mermaid-filter -s ${file} -o ${fileDirname}/assets/pdf-output/${fileBasenameNoExtension}.pdf --pdf-engine=xelatex -V geometry:'top=2cm, bottom=1.5cm, left=2cm, right=2cm' --strip-comments   && cd ..",
+                "problemMatcher": []
+            }
         ]
     }
 }
