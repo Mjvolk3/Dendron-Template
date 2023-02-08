@@ -62,9 +62,9 @@ workspace:
             dropped: d
             pending: 'y'
         prioritySymbols:
+            H: high
             M: medium
             L: low
-            H: high
         todoIntegration: false
         createTaskSelectionType: selection2link
         taskCompleteStatus:

@@ -2,7 +2,7 @@
 id: tz8wfy0bidyoi7cew6pxfi4
 title: Outline
 desc: ''
-updated: 1669254494256
+updated: 1675884763500
 created: 1662432714909
 ---
 
@@ -18,11 +18,11 @@ created: 1662432714909
 
 ### Part 3
 
-### Part 4 - Other Generative Models
+### Part 4
 
-### Part 5 - Benchmarking Against other Methods
+### Part 5
 
-### Part 6 - BioModels Benchmarking
+### Part 6
 
 ## Conclusion
 
