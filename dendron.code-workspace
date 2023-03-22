@@ -20,7 +20,23 @@
         "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
         "workbench.colorCustomizations": {
             "titleBar.activeBackground": "#ff000095"
-        }
+        },
+        "markdownlint.config":{
+            "MD007": { "indent": 2 },
+            "MD008": false,
+            "MD013": false,
+            "MD014": false,
+            "MD018": false,
+            "MD025": false,
+            "MD026": false,
+            "MD033": false,
+            "MD045": false,
+            "MD050": false,
+        },
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": true,
+         },
+        "git.autoRepositoryDetection": false
     },
     "extensions": {
         "recommendations": [
@@ -50,15 +66,6 @@
                 "justMyCode": true,
                 "cwd": "${workspaceFolder}"
             },
-            {
-                "name": "Python: Current File",
-                "type": "python",
-                "request": "launch",
-                "program": "${file}",
-                "console": "integratedTerminal",
-                "justMyCode": true,
-                "cwd": "${fileDirname}"
-            },
         ]
     },
     "tasks": {
@@ -67,9 +74,43 @@
             {
                 "label": "Pandoc: quick-pdf",
                 "type": "shell",
-                "command": "cd ./notes && pandoc -F mermaid-filter -s ${file} -o ${fileDirname}/assets/pdf-output/${fileBasenameNoExtension}.pdf --pdf-engine=xelatex -V geometry:'top=2cm, bottom=1.5cm, left=2cm, right=2cm' --strip-comments   && cd ..",
+                "command": "cd ./notes && pandoc -F mermaid-filter -s ${file} -o ${fileDirname}/assets/pdf-output/${fileBasenameNoExtension}.pdf --pdf-engine=xelatex -V geometry:'top=2cm, bottom=1.5cm, left=2cm, right=2cm' --strip-comments  && cd ..",
                 "problemMatcher": []
-            }
+            },
+            {
+                "label": "nano Interactive",
+                "type": "shell",
+                "command": "qsub -I -l nodes=nano${input:nanoNode}:ppn=${input:numProcessors}:gpus=1,walltime=3600",
+                "problemMatcher": []
+            },
+            {
+                "label": "nano qsub main",
+                "type": "shell",
+                "command": "qsub main.script -l nodes=nano${input:nanoNode}:ppn=${input:numProcessors}:gpus=1,walltime=96:00:00 -N ${input:jobName}",
+                "problemMatcher": []
+
+            },
+        ],
+        "inputs" : [
+            {
+                "id" : "jobName",
+                "description": "name of nano job",
+                "type": "promptString",
+            },
+            {
+                "id" : "nanoNode",
+                "description": "nano Node",
+                "type": "pickString",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "6",
+                    "8"
+
+                ]
+            },
         ]
     }
 }

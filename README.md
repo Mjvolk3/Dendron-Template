@@ -1,12 +1,7 @@
-# Dendron Template
+# Dendron Template Workspace
 
-A template for starting publishable dendron-code projects
+A template for starting publishable dendron-code projects.
 
-## Setup
+## Tutorial
 
-[Dendron Reference](https://wiki.dendron.so/notes/FnK2ws6w1uaS1YzBUY3BR/)
-
-- `npm init -y`
-  - Initializes a npm repo at the root of your workspace (where dendron.yml is located)
-- `npm install @dendronhq/dendron-cli@latest`
-  - Install dendron-cli
+Go to [[Tutorial|workspace.tutorial]] to find tips on intended usage.
