@@ -2,9 +2,9 @@
 id: e8kb97d0ku0yblwiraw8wv0
 title: Tutorial
 desc: ''
-updated: 1679541871806
+updated: 1679605724023
 created: 1679518622314
-giscus: true
+enableGiscus: true
 ---
 ## Dendron Important Files
 
