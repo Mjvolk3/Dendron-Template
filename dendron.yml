@@ -117,3 +117,17 @@ publishing:
         payload:
             - notes
     theme: light
+    giscus:
+        id: comments
+        repo: Mjvolk3/Dendron-Template
+        repoId: R_kgDOIfijfA
+        category: Announcements
+        categoryId: DIC_kwDOIjXV184CTACu
+        mapping: pathname
+        theme: light
+        strict: '0'
+        reactionsEnabled: '1'
+        emitMetadata: '0'
+        inputPosition: bottom
+        lang: en
+        loading: lazyX
