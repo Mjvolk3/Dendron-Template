@@ -110,9 +110,8 @@ publishing:
     enableTaskNotes: true
     enablePrettyLinks: true
     searchMode: lookup
-    enableMermaid: true
     assetsPrefix: /Dendron-Template
-    siteUrl: https://Mjvolk3.github.io
+    siteUrl: https://mjvolk3.github.io/Dendron-Template/
     duplicateNoteBehavior:
         action: useVault
         payload:
