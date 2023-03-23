@@ -2,7 +2,7 @@
 id: e8kb97d0ku0yblwiraw8wv0
 title: Tutorial
 desc: ''
-updated: 1679541525735
+updated: 1679541871806
 created: 1679518622314
 giscus: true
 ---
@@ -82,6 +82,7 @@ giscus: true
 - Open [[src/my_package/__main__.py]].
 - `Command Palette` → `Debug: Start Debugging`.
   - Launch settings can be found [[dendron.code-workspace]].
+  - You can note that from the published version, the above link is marked as private. This is because the html is referencing an unknown files directory. To overcome this for publishing the url link can be used instead. [src/my_package/__main__.py](https://github.com/Mjvolk3/Dendron-Template/blob/main/src/my_package/__main__.py)
 
 ### Error Python Package
 
