@@ -2,7 +2,7 @@
 id: e8kb97d0ku0yblwiraw8wv0
 title: Tutorial
 desc: ''
-updated: 1679523845176
+updated: 1679540499331
 created: 1679518622314
 ---
 ## Dendron Important Files
@@ -143,6 +143,7 @@ pandoc input.md -o output.tex -s --template=mytemplate.tex
 - An example of this usage is given here [[notebooks/using-my-package.ipynb]].
 - I printed this notebook to a pdf [[notebooks/using-my-package.pdf]] on the notebook page under the triple dot options.
   - This options uses the [Quarto](https://quarto.org/docs/tools/vscode.html) extension by default if installed.
+- You can also export to html within Jupyter, see [[notebooks/using-my-package.html]].
 
 ## Reproducible Python Environments
 
@@ -165,3 +166,23 @@ python -m pip install -e .
 ```
 
 ## Drawio
+
+- Not necessary but another element I like about taking notes with Dendron is using the [Draw.io](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. This allows making quick graphics that can be updated at any time.
+
+### Drawio Demonstrations
+
+- To make a draw.io image `command palette` → `Draw.io: New Draw.io Diagram`.
+- Make a drawing and save the file.
+- Within the draw.io gui go to file → convert → png or svg.
+- Import the image as you would import any other image. See below.
+- If the image is too small once imported into a note you can adjust the size by changing the zoom property. Go to the draw.io gui go to file → properties → zoom.
+
+![](/assets/drawio/Dendron_Template_Example.drawio.png)
+
+- This draw.io graphic shows how the [[dendronrc.yml]] is used, and how the workspace is intended to be used in a modular fashion. The important part of this linking is that each workspace is standalone. If an of the links are severed by removing the workspace from the [[dendronrc.yml]], links and note references will go dead, but this should not cause any other part of the workspace to break. The links can be restored by adding the workspace back to [[dendronrc.yml]], and links are traceable if `enableXVaultWikiLink: true` in [[dendron.yml]] . This is the default.
+
+![](/assets/drawio/Drawio-fancy-features.drawio.png)
+
+- This is an example of how draw.io using latex equations. There is another feature that I haven't found terribly useful, but it is interesting. You can link draw.io objects to individual code files. This can be done by selecting a draw.io object, opening a code file, and funning `Draw.io: Toggle Code Link Activation`. Then if you open the draw.io image, you can double click that object and it should open the file. This could be useful for charting out different modules and planing. Draw.io also allows for input of data, so graphs can be constructed by data import. There is some interesting ideas here around visualizing code dependencies, note linkages of subgraphs within Dendron, etc.
+
+- Most figures in this [project](https://mjvolk3.github.io/MATH-490-Project/) are made with Draw.io.
