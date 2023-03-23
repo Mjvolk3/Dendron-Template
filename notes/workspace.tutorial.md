@@ -2,7 +2,7 @@
 id: e8kb97d0ku0yblwiraw8wv0
 title: Tutorial
 desc: ''
-updated: 1679540499331
+updated: 1679541418973
 created: 1679518622314
 ---
 ## Dendron Important Files
@@ -16,8 +16,10 @@ created: 1679518622314
 ## Dendron Cli
 
 - 🚨 **NOT WORKING**
-  - I need to rewrite some of the bash scripts, once these are written, [[workspace.tutorial#potential-of-combining-dendron-notes-to-latex-paper]] will make more sense.
+  - I need to rewrite some of the bash scripts, once these are written, [latex-writing-environment](#latex-writing-environment)
+  will make more sense.
     - This is an example of linking within a note
+    - Note that regular markdown linking should be used for linking within document. `command palette` → `Trigger Suggest` is useful for this.
 
 - This step is necessary for stitching together [[Paper|Paper]].
   - [Dendron Reference](https://wiki.dendron.so/notes/FnK2ws6w1uaS1YzBUY3BR/).
