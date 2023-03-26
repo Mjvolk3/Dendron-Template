@@ -5,7 +5,7 @@ dev:
 commands:
     lookup:
         note:
-            selectionMode: extract
+            selectionMode: link
             confirmVaultOnCreate: true
             leaveTrace: false
             bubbleUpCreateNew: true
