@@ -1,12 +1,12 @@
 # first_module.py
-def a_useful_function():
+def a_useful_function() -> None:
     """
     A useful function
     """
     print("Hello world! a_useful_function rom first_module.py")
 
 
-def main(author: str = "Mike"):
+def main(author: str = "Mike") -> None:
     """
     A generate print statement
 

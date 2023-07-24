@@ -2,7 +2,7 @@
 id: e8kb97d0ku0yblwiraw8wv0
 title: Tutorial
 desc: ''
-updated: 1679605724023
+updated: 1690230640552
 created: 1679518622314
 enableGiscus: true
 ---
@@ -190,3 +190,11 @@ python -m pip install -e .
 - This is an example of how draw.io using latex equations. There is another feature that I haven't found terribly useful, but it is interesting. You can link draw.io objects to individual code files. This can be done by selecting a draw.io object, opening a code file, and funning `Draw.io: Toggle Code Link Activation`. Then if you open the draw.io image, you can double click that object and it should open the file. This could be useful for charting out different modules and planing. Draw.io also allows for input of data, so graphs can be constructed by data import. There is some interesting ideas here around visualizing code dependencies, note linkages of subgraphs within Dendron, etc.
 
 - Most figures in this [project](https://mjvolk3.github.io/MATH-490-Project/) are made with Draw.io.
+
+## Python Docs
+
+- Documentation could be written with Dendron, but there are already tools that have a lot of nice features for documenting a python library. I've elected to use Sphinx for documentation. A [[Sphinx Step-by-Step Guide|python.docs.sphinx]] will help with python documentation.
+
+## Python Testing
+
+- I have setup this project to use `pytest` for all python projec testing. Test files sit in `tests/test_*.py` and test the functionality of the library in `src`

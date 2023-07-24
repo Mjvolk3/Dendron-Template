@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "my_package"
-version = "1.0.0"
+version = "0.0.0"
 description = "An example package"
 readme = "README.md"
 authors = [{ name = "Michael Volk", email = "michaeljvolk7@gmail.com" }]
@@ -19,7 +19,7 @@ classifiers = [
 keywords = ["An example package", "starving artist"]
 dependencies = [
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [project.optional-dependencies]
 dev = ["black", "bumpver", "pip-tools", "pytest"]
