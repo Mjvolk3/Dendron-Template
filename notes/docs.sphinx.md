@@ -2,12 +2,12 @@
 id: nvuc3n04qutu749nxkgurey
 title: Sphinx
 desc: ''
-updated: 1690228184120
+updated: 1690229688931
 created: 1690228048103
 ---
 ## Generating Sphinx Docs for Python
 
-step-by-step guide to generating documentation for your Python project with Sphinx, including changing the theme:
+Step-by-step guide:
 
 1. **Install Sphinx**: Install Sphinx in your Python environment using pip.
 
@@ -35,7 +35,22 @@ step-by-step guide to generating documentation for your Python project with Sphi
 
     Also, add `'sphinx.ext.autodoc'` to the list of extensions.
 
-4. **Write reStructuredText files**: Create `.rst` files for each of your modules to tell Sphinx what to document. These files should be in the same directory as your `conf.py` file. For a module named `my_module`, the contents of `my_module.rst` could be:
+4. **Install and Configure the MyST parser**: If you want to use Markdown for some or all of your documentation, you'll need to install the MyST parser and add it to your list of extensions:
+
+    ```shell
+    pip install myst-parser
+    ```
+
+    Then add it to the `extensions` list in `conf.py`:
+
+    ```python
+    extensions = [
+        'sphinx.ext.autodoc',
+        'myst_parser',
+    ]
+    ```
+
+5. **Write reStructuredText and Markdown files**: Create `.rst` and/or `.md` files for each of your modules to tell Sphinx what to document. These files should be in the same directory as your `conf.py` file. For a module named `my_module`, the contents of `my_module.rst` could be:
 
     ```rst
     my_package.my_module module
@@ -47,7 +62,9 @@ step-by-step guide to generating documentation for your Python project with Sphi
 
     Update the `index.rst` file to include your module in the table of contents tree (`toctree`).
 
-5. **Install and configure a theme**: To use the "Read the Docs" theme, first install it with pip:
+    To link to other documentation files, use the `:doc:` role in reStructuredText files and standard Markdown links in Markdown files.
+
+6. **Install and configure a theme**: To use the "Read the Docs" theme, first install it with pip:
 
     ```shell
     pip install sphinx_rtd_theme
@@ -59,11 +76,12 @@ step-by-step guide to generating documentation for your Python project with Sphi
     extensions = [
         'sphinx.ext.autodoc',
         'sphinx_rtd_theme',
+        'myst_parser',  # if you're using Markdown
     ]
     html_theme = 'sphinx_rtd_theme'
     ```
 
-6. **Generate the HTML documentation**: Now you can generate the HTML documentation with the `make html` command.
+7. **Generate the HTML documentation**: Now you can generate the HTML documentation with the `make html` command.
 
     ```shell
     make html
@@ -71,9 +89,10 @@ step-by-step guide to generating documentation for your Python project with Sphi
 
     If everything is set up correctly, Sphinx should generate the documentation in the `_build/html` directory. Open the `index.html` file in a web browser to view your documentation.
 
-Remember that every time you update your code or `.rst` files, you should re-run `make html` to update the HTML documentation.
+Remember that every time you update your code or `.rst`/`.md` files, you should re-run `make html` to update the HTML documentation.
 
 ## Additional Notes and Gotchas
 
-- You must cd to docs dir to make html `cd src/docs` then `make html`. `make src/docs/html` does not work.
+- Standard practice is to keep docs outside of `src`.
+- You must cd to docs dir to make html `cd docs` then `make html`. `make docs/html` does not work.
 - You can use the VsCode Extension live server on the `index.rst` to preview the docs.
