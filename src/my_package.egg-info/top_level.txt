@@ -1,1 +1,2 @@
+docs
 my_package

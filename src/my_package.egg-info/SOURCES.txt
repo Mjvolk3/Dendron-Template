@@ -1,5 +1,6 @@
 README.md
 pyproject.toml
+src/docs/conf.py
 src/my_package/__init__.py
 src/my_package/__main__.py
 src/my_package/first_module.py
