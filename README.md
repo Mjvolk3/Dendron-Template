@@ -8,4 +8,8 @@ Go to [workspace.tutorial](https://mjvolk3.github.io/Dendron-Template/notes/e8kb
 
 ## Python
 
-![Python application](https://github.com/mjvolk3/Dendron-Template/actions/workflows/python-app.yml/badge.svg)
+![Python application](https://github.com/mjvolk3/Dendron-Template/actions/workflows/python_app.yaml/badge.svg)
+
+![MyPy](https://github.com/mjvolk3/Dendron-Template/actions/workflows/mypy.yaml/badge.svg)
+
+![Black](https://github.com/mjvolk3/Dendron-Template/actions/workflows/black.yaml/badge.svg)
