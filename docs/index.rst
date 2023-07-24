@@ -10,6 +10,7 @@ Welcome to my_package's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   introduction
    my_package
 
 Indices and tables
