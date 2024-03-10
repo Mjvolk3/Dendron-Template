@@ -1,0 +1,361 @@
+{
+  "roots": [
+    {
+      "key": "nuyfwd7iokzd7m9oax0cdx5",
+      "title": "Root-Dendron-Template",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron-Template",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "ko1srdvolpl9crv2nakc7lv",
+          "title": "chatGPT",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "5p61wx65hh4e7y7gije8awr",
+              "title": "conversation",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "j44m1q5k69eief4whmuiq4k",
+                  "title": "conda-env-yaml-output",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "y490a2sq340okmcqu0p5gi9",
+          "title": "Outline",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "tz8wfy0bidyoi7cew6pxfi4",
+              "title": "01",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "m7o7r4jqe4jdwgsh3ia8sa4",
+          "title": "Paper",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "5excb1b3qn779tz6628yaab",
+              "title": "Abstract",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "lxagjmq97cfful42mr4xkyw",
+              "title": "Conclusion",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "cwlhau9r4wa0zaud9vj0ajh",
+              "title": "Introduction",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "cblp5aoncbn1av54txaeaoq",
+              "title": "Methods",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "9cczfcz8cxubjf7y7naxdb6",
+              "title": "Results-and-Discussion",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "b970axpbzritz2ljl1axusj",
+                  "title": "1",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "37tqxekttlmku940blxp6c7",
+                  "title": "2",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "7xp8n4kqq93y897n9s32ihy",
+                  "title": "3",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "rr7ckdxgf5l6ehuv82cv04z",
+                  "title": "4",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "iq2au254hboedsg2urnhlm1",
+                  "title": "5",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                },
+                {
+                  "key": "vz00dg1dgfoav7puepignmd",
+                  "title": "6",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "u255wwecd689wiqsm1xcuvo",
+              "title": "Supplementary",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "46hb04dyz2910h30x0lyoru",
+              "title": "Title",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "k0qo53e6jvew0mcyv49bu0e",
+          "title": "Publish",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "p6evbyfciaotkrkwav3ipra",
+              "title": "Pdf",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            },
+            {
+              "key": "mg7066wnd3agqrjxcxmrxkx",
+              "title": "Word",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "ntugb4sx5i9ol6bd4yp0dk4",
+          "title": "Python",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "038soj98sjcjk27c3r2za0m",
+              "title": "Docs",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "nvuc3n04qutu749nxkgurey",
+                  "title": "Sphinx",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "n4rrwcsk6xr8ik4ybpqd3uv",
+          "title": "User",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "crpkn1fqz06b0sbcm3v7qth",
+              "title": "Mjvolk3",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "grp7ckshjttino8qdemtzj0",
+                  "title": "tasks",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "Dendron-Template",
+                  "navExclude": false,
+                  "children": [
+                    {
+                      "key": "qrpuop083pghmfiqe6va4y7",
+                      "title": "future",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "Dendron-Template",
+                      "navExclude": false,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lsmo9vuamdrc8b1k3pez6dc",
+          "title": "Vscode",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "9djyueywhmefs6yxmu4wtn2",
+              "title": "Extensions",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "fximop5rrzvb5lau5tc42xv",
+          "title": "Workspace",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron-Template",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "e8kb97d0ku0yblwiraw8wv0",
+              "title": "Tutorial",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "Dendron-Template",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "nuyfwd7iokzd7m9oax0cdx5": null,
+    "ntugb4sx5i9ol6bd4yp0dk4": "nuyfwd7iokzd7m9oax0cdx5",
+    "038soj98sjcjk27c3r2za0m": "ntugb4sx5i9ol6bd4yp0dk4",
+    "nvuc3n04qutu749nxkgurey": "038soj98sjcjk27c3r2za0m",
+    "ko1srdvolpl9crv2nakc7lv": "nuyfwd7iokzd7m9oax0cdx5",
+    "5p61wx65hh4e7y7gije8awr": "ko1srdvolpl9crv2nakc7lv",
+    "j44m1q5k69eief4whmuiq4k": "5p61wx65hh4e7y7gije8awr",
+    "fximop5rrzvb5lau5tc42xv": "nuyfwd7iokzd7m9oax0cdx5",
+    "e8kb97d0ku0yblwiraw8wv0": "fximop5rrzvb5lau5tc42xv",
+    "lsmo9vuamdrc8b1k3pez6dc": "nuyfwd7iokzd7m9oax0cdx5",
+    "9djyueywhmefs6yxmu4wtn2": "lsmo9vuamdrc8b1k3pez6dc",
+    "n4rrwcsk6xr8ik4ybpqd3uv": "nuyfwd7iokzd7m9oax0cdx5",
+    "crpkn1fqz06b0sbcm3v7qth": "n4rrwcsk6xr8ik4ybpqd3uv",
+    "grp7ckshjttino8qdemtzj0": "crpkn1fqz06b0sbcm3v7qth",
+    "qrpuop083pghmfiqe6va4y7": "grp7ckshjttino8qdemtzj0",
+    "k0qo53e6jvew0mcyv49bu0e": "nuyfwd7iokzd7m9oax0cdx5",
+    "mg7066wnd3agqrjxcxmrxkx": "k0qo53e6jvew0mcyv49bu0e",
+    "p6evbyfciaotkrkwav3ipra": "k0qo53e6jvew0mcyv49bu0e",
+    "y490a2sq340okmcqu0p5gi9": "nuyfwd7iokzd7m9oax0cdx5",
+    "tz8wfy0bidyoi7cew6pxfi4": "y490a2sq340okmcqu0p5gi9",
+    "m7o7r4jqe4jdwgsh3ia8sa4": "nuyfwd7iokzd7m9oax0cdx5",
+    "46hb04dyz2910h30x0lyoru": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "u255wwecd689wiqsm1xcuvo": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "cblp5aoncbn1av54txaeaoq": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "9cczfcz8cxubjf7y7naxdb6": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "vz00dg1dgfoav7puepignmd": "9cczfcz8cxubjf7y7naxdb6",
+    "iq2au254hboedsg2urnhlm1": "9cczfcz8cxubjf7y7naxdb6",
+    "rr7ckdxgf5l6ehuv82cv04z": "9cczfcz8cxubjf7y7naxdb6",
+    "7xp8n4kqq93y897n9s32ihy": "9cczfcz8cxubjf7y7naxdb6",
+    "37tqxekttlmku940blxp6c7": "9cczfcz8cxubjf7y7naxdb6",
+    "b970axpbzritz2ljl1axusj": "9cczfcz8cxubjf7y7naxdb6",
+    "cwlhau9r4wa0zaud9vj0ajh": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "lxagjmq97cfful42mr4xkyw": "m7o7r4jqe4jdwgsh3ia8sa4",
+    "5excb1b3qn779tz6628yaab": "m7o7r4jqe4jdwgsh3ia8sa4"
+  }
+}
