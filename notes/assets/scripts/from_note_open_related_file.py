@@ -1,0 +1,61 @@
+# /Users/michaelvolk/Documents/projects/Dendron-Template/notes/assets/scripts/from_note_open_related_file.py
+import os
+import sys
+import subprocess
+from dotenv import load_dotenv
+
+load_dotenv()
+
+VSCODE_PATH = os.environ.get("VSCODE_PATH")
+
+
+def get_git_root():
+    """Get the git repository root, works in both main repo and worktrees."""
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
+    except subprocess.CalledProcessError:
+        # Fallback to get_git_root() if not in a git repo
+        return os.environ.get("get_git_root()")
+
+
+def convert_to_file_path(dendron_path, extension):
+    """Convert Dendron's period-delimited format to a file path with given extension."""
+    git_root = get_git_root()
+    # Append the leading path to the workspace
+    return os.path.join(git_root, dendron_path.replace(".", "/") + extension)
+
+
+def open_related_file(note_file_path):
+    print("note_file_path ", note_file_path)
+
+    # Extract the dendron path from the note file path
+    dendron_path = (
+        note_file_path.replace(get_git_root(), "")
+        .replace("notes", "")
+        .replace(".md", "")
+        .lstrip("/")
+        .lstrip("\\")
+    )
+    print("dendron_path: ", dendron_path)
+
+    # Try both .py and .sh extensions
+    for extension in [".py", ".sh"]:
+        file_path = convert_to_file_path(dendron_path, extension)
+        print(f"Checking {extension} file: {file_path}")
+        if os.path.exists(file_path):
+            print(f"{extension} file exists")
+            subprocess.run([VSCODE_PATH, file_path])  # Open the related file in VSCode
+            return
+
+    print("No related .py or .sh file found")
+
+
+if __name__ == "__main__":
+    note_file_path = sys.argv[1]
+    open_related_file(note_file_path)

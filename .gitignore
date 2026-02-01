@@ -4,3 +4,4 @@ node_modules
 .dendron.port
 .dendron.ws
 notes/.dendron.cache.json
+*/__pycache__/*

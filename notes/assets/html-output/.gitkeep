@@ -1,0 +1,2 @@
+# This directory stores HTML output from Pandoc conversions
+# Example: pandoc notes.md -o output.html

@@ -1,0 +1,62 @@
+{
+    // Example user-specific workspace file
+    //
+    // PATTERN: Common tasks, debugger configs, and shared settings are in .vscode/
+    // This file contains ONLY user-specific overrides:
+    // - Custom titlebar colors (to distinguish workspaces visually)
+    // - Python interpreter paths (different per user/machine)
+    // - Additional folders specific to this user's workflow
+    // - User-specific environment settings
+    //
+    // Copy this file to create your own user workspace:
+    //   cp dendron-user-2.code-workspace dendron-yourname.code-workspace
+
+    "folders": [
+        {
+            "name": "dendron-template",
+            "path": "."
+        }
+        // Add additional folders for multi-root workspace if needed
+        // {
+        //     "name": "related-project",
+        //     "path": "../related-project"
+        // }
+    ],
+    "settings": {
+        // Visual distinction: Change titlebar color to identify this workspace
+        "workbench.colorCustomizations": {
+            "titleBar.activeBackground": "#2e7d32"  // Green for user-2
+        },
+
+        // User-specific Python environment
+        // Override the default Python interpreter if needed
+        // "python.defaultInterpreterPath": "/Users/yourname/miniconda3/envs/your-env/bin/python",
+
+        // User-specific paths
+        // "python.testing.cwd": "${workspaceFolder}",
+
+        // All other settings (Dendron, Markdown, Editor, etc.)
+        // are inherited from .vscode/settings.json
+    },
+    "extensions": {
+        "recommendations": [
+            "dendron.dendron",
+            "dendron.dendron-paste-image",
+            "dendron.dendron-markdown-shortcuts",
+            "redhat.vscode-yaml"
+        ],
+        "unwantedRecommendations": [
+            "dendron.dendron-markdown-links",
+            "dendron.dendron-markdown-vault",
+            "dendron.dendron-markdown-preview-enhanced",
+            "shd101wyy.markdown-preview-enhanced",
+            "kortina.vscode-markdown-notes",
+            "mushan.vscode-paste-image"
+        ]
+    }
+    // Tasks and launch configs are now centralized in:
+    // - .vscode/tasks.json
+    // - .vscode/launch.json
+    //
+    // No need to duplicate them here!
+}
