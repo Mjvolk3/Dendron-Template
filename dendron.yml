@@ -14,13 +14,13 @@ commands:
     insertNote:
         initialValue: templates
     insertNoteLink:
-        aliasMode: title
+        aliasMode: none
         enableMultiSelect: false
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
     copyNoteLink:
-        aliasMode: title
+        aliasMode: none
     templateHierarchy: template
 workspace:
     vaults:
