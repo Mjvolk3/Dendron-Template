@@ -2,6 +2,7 @@ node_modules
 
 .next
 .dendron.port
+.dendron.port.cli
 .dendron.ws
 notes/.dendron.cache.json
 */__pycache__/*

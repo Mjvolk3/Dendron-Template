@@ -6,7 +6,7 @@
 #
 # - Strips YAML frontmatter (--- ... ---) from input and all transcluded notes
 # - Replaces ![[note.path]] lines with the content of notes/note.path.md
-# - Only processes top-level ![[...]] (not nested transclusions in transcluded notes)
+# - Recursively resolves nested transclusions (up to 10 levels deep)
 
 set -euo pipefail
 
@@ -18,6 +18,8 @@ mkdir -p "${EXPORT_DIR}"
 
 input_file="$1"
 basename="$(basename "$input_file")"
+
+MAX_DEPTH=10
 
 # Strip YAML frontmatter (--- ... ---) from a file
 strip_frontmatter() {
@@ -32,22 +34,35 @@ strip_frontmatter() {
     ' "$1"
 }
 
-# Process the input: strip frontmatter, then resolve ![[note]] transclusions
-output_file="${EXPORT_DIR}/${basename}"
+# Recursively resolve ![[note]] transclusions
+# Usage: resolve_transclusions <file> <depth>
+resolve_transclusions() {
+    local file="$1"
+    local depth="${2:-0}"
 
-strip_frontmatter "$input_file" | while IFS= read -r line; do
-    if [[ "$line" =~ ^[[:space:]]*\!\[\[([^\]]+)\]\][[:space:]]*$ ]]; then
-        note_name="${BASH_REMATCH[1]}"
-        note_file="${NOTES_DIR}/${note_name}.md"
-        if [[ -f "$note_file" ]]; then
-            strip_frontmatter "$note_file"
+    if (( depth > MAX_DEPTH )); then
+        echo "<!-- WARNING: max transclusion depth exceeded for ${file} -->"
+        return
+    fi
+
+    strip_frontmatter "$file" | while IFS= read -r line; do
+        if [[ "$line" =~ ^[[:space:]]*\!\[\[([^\]]+)\]\][[:space:]]*$ ]]; then
+            note_name="${BASH_REMATCH[1]}"
+            note_file="${NOTES_DIR}/${note_name}.md"
+            if [[ -f "$note_file" ]]; then
+                resolve_transclusions "$note_file" $((depth + 1))
+            else
+                echo "$line"
+                echo "<!-- WARNING: note not found: ${note_name} -->"
+            fi
         else
             echo "$line"
-            echo "<!-- WARNING: note not found: ${note_name} -->"
         fi
-    else
-        echo "$line"
-    fi
-done > "$output_file"
+    done
+}
+
+# Process the input and write to output
+output_file="${EXPORT_DIR}/${basename}"
+resolve_transclusions "$input_file" 0 > "$output_file"
 
 echo "Exported: ${output_file}"
