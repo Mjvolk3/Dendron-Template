@@ -5,6 +5,9 @@
 
     // Files
     "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "**/notes/**/*.md": "markdown"
+    },
 
     // Paste Image
     "pasteImage.path": "${currentFileDir}/assets/images",
@@ -17,6 +20,14 @@
     "[markdown]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.markdownlint": "explicit"
+        }
+    },
+
+    // Python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit"
         }
     },
 

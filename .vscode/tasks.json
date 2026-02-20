@@ -66,16 +66,23 @@
             "problemMatcher": []
         },
         {
-            "label": "notability: sync",
+            "label": "Dendron: export pod md",
             "type": "shell",
-            "command": "bash notes/assets/scripts/notability_sync.sh",
+            "command": "bash ./notes/assets/publish/scripts/export_pod_md.sh ${file}",
             "problemMatcher": []
         },
         {
-            "label": "black: file",
+            "label": "Dendron: export pod md + pdf",
             "type": "shell",
-            "command": "black",
+            "command": "bash ./notes/assets/publish/scripts/export_pod_md.sh ${file} && ./notes/assets/publish/scripts/bib_tex_pdf.sh ./notes/assets/export-pod-md/${fileBasename} ./notes/assets/export-pod-md ${fileBasenameNoExtension} pdf-pod-output",
+            "problemMatcher": []
+        },
+        {
+            "label": "ruff: format file",
+            "type": "shell",
+            "command": "ruff",
             "args": [
+                "format",
                 "${file}"
             ],
             "problemMatcher": [],
@@ -85,15 +92,41 @@
             }
         },
         {
-            "label": "isort: file",
+            "label": "ruff: check file",
             "type": "shell",
-            "command": "isort ${file}",
+            "command": "ruff",
+            "args": [
+                "check",
+                "--fix",
+                "${file}"
+            ],
             "problemMatcher": [],
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared",
-                "close": false
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
+        },
+        {
+            "label": "mypy: file",
+            "type": "shell",
+            "command": "mypy ${file}",
+            "problemMatcher": []
+        },
+        {
+            "label": "pyreverse: UML class diagram",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "pyreverse",
+                "-o",
+                "png",
+                "-p",
+                "uml_temp",
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": "build"
         },
         {
             "label": "add frontmatter (py/sh)",
@@ -194,7 +227,7 @@
         {
             "label": "pytest: coverage",
             "type": "shell",
-            "command": "pytest --cov=Dendron-Template --cov-report html tests/",
+            "command": "coverage run -m pytest tests/ -x && coverage report",
             "problemMatcher": []
         },
         {

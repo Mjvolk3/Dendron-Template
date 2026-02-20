@@ -19,13 +19,55 @@ classifiers = [
 keywords = ["An example package", "starving artist"]
 dependencies = [
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 
 [project.optional-dependencies]
-dev = ["black", "bumpver", "pip-tools", "pytest"]
+dev = ["ruff", "bumpver", "pip-tools", "pytest"]
 
 [project.urls]
 Homepage = "https://github.com/Mjvolk3/Dendron-Template"
 
 [project.scripts]
 genPE = "my_package.__main__:main"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "D"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"**" = ["D205", "D212", "D415"]
+"tests/**" = ["D103", "D104"]
+"notes/assets/scripts/**" = ["D100", "D103"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+disallow_untyped_decorators = false
+
+[tool.coverage.run]
+source = ["my_package"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.",
+    "if TYPE_CHECKING:",
+]
